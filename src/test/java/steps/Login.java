@@ -1,26 +1,21 @@
 package steps;
 
-import io.cucumber.java.After;
+import io.cucumber.core.api.Scenario;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import workflows.RegistrationWorkflow;
+import workflows.WorkflowFactory;
 
 public class Login {
 
-    public WebDriver driver;
+    private final RegistrationWorkflow registrationWorkflow;
 
-    public Login(WebDriver driver){
-        this.driver = driver;
-    }
-
-    @Before
-    public void beforeScenario(){
-        driver = new ChromeDriver();
+    public Login(DeviceController deviceController) {
+        this.registrationWorkflow = WorkflowFactory.getTestWorkflow(deviceController);
     }
 
     @Given("^I am a registered user$")
@@ -87,11 +82,6 @@ public class Login {
     public void iAmOnTheWelcomePage() throws Throwable
     {
         System.out.println("I am on the Welcome page");
-    }
-
-    @After
-    public void cleanUp(){
-        driver.close();
     }
 }
 

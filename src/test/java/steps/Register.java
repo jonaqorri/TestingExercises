@@ -9,13 +9,15 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import workflows.RegistrationWorkflow;
+import workflows.WorkflowFactory;
 
 public class Register {
 
-    public WebDriver driver;
+    private final RegistrationWorkflow registrationWorkflow;
 
-    public Register(WebDriver driver){
-        this.driver = driver;
+    public Register(DeviceController deviceController){
+        this.registrationWorkflow = WorkflowFactory.getTestWorkflow(deviceController);
     }
 
     @When("^I click on Register tab$")
@@ -72,21 +74,4 @@ public class Register {
         System.out.println("I click the User icon on the site header");
     }
 
-    public byte[] embedScreenshot(){
-        byte[] srcByte = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-        //scenario.embed(srcByte, "impage/png");
-        return srcByte;
-    }
-
-    @AfterStep
-    public void afterStep() throws Throwable {
-        //selenium.embedScreenshot();
-    }
-
-
-
-    @After
-    public void cleanUp(){
-        driver.close();
-    }
 }

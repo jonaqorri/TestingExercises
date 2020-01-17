@@ -11,7 +11,7 @@ Feature: Register
   Scenario: Register
     Given I am on the Registration page
     When I fill in the 6 text fields
-    And I am able to click the Registe button
+    And I am able to click the Register button
     Then I am redirected to the Welcome to Codeveros page
 
   Scenario: Check the user is registered through the menu

@@ -5,10 +5,10 @@ import org.testng.annotations.DataProvider;
 import static io.cucumber.testng.CucumberOptions.SnippetType.CAMELCASE;
 
 @CucumberOptions(
-        plugin = "json:target/cucumber-report.json",
+        plugin = {"json:target/cucumber-report/cucumber-report.json", "junit:target/cucumber-report/cucumber-report.xml", "html:target/cucumber-report/", "pretty", "summary"},
         strict = true,
         monochrome = true,
-        glue = {"steps"},
+        glue = "steps",
         features = {"src/test/features"},
         snippets = CAMELCASE
 )

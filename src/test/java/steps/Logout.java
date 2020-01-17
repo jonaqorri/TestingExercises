@@ -4,14 +4,15 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.And;
-import objects.Driver;
 import org.openqa.selenium.WebDriver;
+import workflows.RegistrationWorkflow;
+import workflows.WorkflowFactory;
 
 public class Logout {
-    private WebDriver driver;
+    private final RegistrationWorkflow registrationWorkflow;
 
-    public Logout(WebDriver driver) {
-        this.driver = driver;
+    public Logout(DeviceController deviceController) {
+        this.registrationWorkflow = WorkflowFactory.getTestWorkflow(deviceController);
     }
 
     @When("^I click the log out button$")
@@ -38,8 +39,4 @@ public class Logout {
         System.out.println("I am returned to the Sign In page");
     }
 
-    @After
-    public void cleanUp(){
-        driver.close();
-    }
 }

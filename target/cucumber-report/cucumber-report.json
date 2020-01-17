@@ -1,0 +1,621 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-17T14:18:15.299Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2849232082,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Signing in with correct credentials",
+        "description": "",
+        "id": "login-and-logout;signing-in-with-correct-credentials",
+        "after": [
+          {
+            "result": {
+              "duration": 188206033,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 255171,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am a registered user",
+            "match": {
+              "location": "Login.iAmARegisteredUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 51872,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on the Sign In tab on the site",
+            "match": {
+              "location": "Login.iClickOnTheSignInTabOnTheSite()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 62461,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I type my correct username and password",
+            "match": {
+              "location": "Login.iTypeMyCorrectUsernameAndPassword()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 48697,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click the Sign In button",
+            "match": {
+              "location": "Login.iClickTheSignInButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "I should be redirected to the \"Welcome\" page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-17T14:18:15.277Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2874417409,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Signing in with incorrect credentials",
+        "description": "",
+        "id": "login-and-logout;signing-in-with-incorrect-credentials",
+        "after": [
+          {
+            "result": {
+              "duration": 186154932,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 275204,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I am a user",
+            "match": {
+              "location": "Login.iAmAUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 51291,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I click on the Sign In tab on the site",
+            "match": {
+              "location": "Login.iClickOnTheSignInTabOnTheSite()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 50659,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I type in the wrong username and password combo",
+            "match": {
+              "location": "Login.iTypeInTheWrongUsernameAndPasswordCombo()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64333,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I click the Sign In button",
+            "match": {
+              "location": "Login.iClickTheSignInButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 47224,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I should see a Failed Login message",
+            "match": {
+              "location": "Login.iShouldSeeAFailedLoginMessage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-17T14:18:15.277Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2899219458,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Logging out",
+        "description": "",
+        "id": "login-and-logout;logging-out",
+        "after": [
+          {
+            "result": {
+              "duration": 192326037,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 202482,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I am a registered user",
+            "match": {
+              "location": "Login.iAmARegisteredUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 56959,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I am logged in to the site",
+            "match": {
+              "location": "Login.iAmLoggedInToTheSite()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 224229,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I click the log out button",
+            "match": {
+              "location": "Logout.iClickTheLogOutButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 57747,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the Sign Out pop up appears",
+            "match": {
+              "location": "Logout.theSignOutPopUpAppears()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 45036,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I click confirm",
+            "match": {
+              "location": "Logout.iClickConfirm()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 43283,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I am returned to the Sign In page",
+            "match": {
+              "location": "Logout.iAmReturnedToTheSignInPage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login and Logout",
+    "description": "  As a user\n  I want to be able login\n  So that I can access the site",
+    "id": "login-and-logout",
+    "keyword": "Feature",
+    "uri": "file:src/test/features/feature1.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-17T14:18:15.277Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2850135762,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Access registration page",
+        "description": "",
+        "id": "register;access-registration-page",
+        "after": [
+          {
+            "result": {
+              "duration": 246886339,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2575275,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I navigate to the Codeveros Login page",
+            "match": {
+              "location": "Login.iNavigateToTheCodeverosLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 277302,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on Register tab",
+            "match": {
+              "location": "Register.iClickOnRegisterTab()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 60385,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I see 6 text fields",
+            "match": {
+              "location": "Register.iSeeSixTextFields()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-17T14:18:15.297Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2872614844,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Register",
+        "description": "",
+        "id": "register;register",
+        "after": [
+          {
+            "result": {
+              "duration": 188431010,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 343816,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I am on the Registration page",
+            "match": {
+              "location": "Register.iAmOnTheRegistrationPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 134349,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I fill in the 6 text fields",
+            "match": {
+              "location": "Register.iFillInTheSixTextFields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "I am able to click the Registe button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 56044,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "I am redirected to the Welcome to Codeveros page",
+            "match": {
+              "location": "Register.iAmRedirectedToTheWelcomeToCodeverosPage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-17T14:18:15.277Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2898692490,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Check the user is registered through the menu",
+        "description": "",
+        "id": "register;check-the-user-is-registered-through-the-menu",
+        "after": [
+          {
+            "result": {
+              "duration": 191897418,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 350854,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I am a registered user",
+            "match": {
+              "location": "Login.iAmARegisteredUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 192867,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I am on the Welcome page",
+            "match": {
+              "location": "Login.iAmOnTheWelcomePage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 173023,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I click User under Menu",
+            "match": {
+              "location": "Register.iClickUserUnderMenu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 51921,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see my information populated under the User List",
+            "match": {
+              "location": "Register.iSeeMyInformationPopulatedUnderTheUserList()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-17T14:18:15.277Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2937322787,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Check the user is registered through the header icon",
+        "description": "",
+        "id": "register;check-the-user-is-registered-through-the-header-icon",
+        "after": [
+          {
+            "result": {
+              "duration": 236966288,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Configuration.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 285451,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I am a registered user",
+            "match": {
+              "location": "Login.iAmARegisteredUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 72157,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I am on the Welcome page",
+            "match": {
+              "location": "Login.iAmOnTheWelcomePage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 191827,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I click the User icon on the site header",
+            "match": {
+              "location": "Register.iCLickTheUserIconOnTheSiteHeader()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 45980,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I see my information populated under the User List",
+            "match": {
+              "location": "Register.iSeeMyInformationPopulatedUnderTheUserList()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Register",
+    "description": "  As a user\n  I want to be able to register for the service\n  So that I can access the site and its features",
+    "id": "register",
+    "keyword": "Feature",
+    "uri": "file:src/test/features/feature2.feature",
+    "tags": []
+  }
+]
