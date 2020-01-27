@@ -23,22 +23,17 @@ public class AndroidController extends DeviceController {
         configuration = new Configuration(this);
     }
 
-    @Override
-    public void setupController(Scenario scenario) {
-
-    }
-
-    public void setUpController(Scenario scenario){
+    public void setupController(Scenario scenario){
         appiumDriverLocalService = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withStartUpTimeOut(15, TimeUnit.SECONDS).usingAnyFreePort());
         appiumDriverLocalService.start();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "android");
         capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
-        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
+        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 90);
 
-        WebDriverManager.chromedriver().forceCache().version("69").setup();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "GalaxyS8-4");
+        WebDriverManager.chromedriver().forceCache().version("79").setup();
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "GalaxyS8-2");
         capabilities.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE, WebDriverManager.chromedriver().getBinaryPath());
 
         driver = new AndroidDriver(appiumDriverLocalService, capabilities);
@@ -46,6 +41,6 @@ public class AndroidController extends DeviceController {
 
     @Override
     public void tearDownController(Scenario scenario) {
-        driver.quit();
+        this.driver.quit();
     }
 }

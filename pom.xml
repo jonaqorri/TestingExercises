@@ -7,33 +7,24 @@
     <groupId>com.coveros.codeveros</groupId>
     <artifactId>TestingExercises</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cucumber.version>4.8.0</cucumber.version>
         <selenium.version>3.141.59</selenium.version>
-        <appium.version>7.3.0</appium.version>
         <webdrivermanager.version>3.3.0</webdrivermanager.version>
         <failsafe.version>3.0.0-M4</failsafe.version>
         <threadcount>5</threadcount>
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java8</artifactId>
+            <artifactId>cucumber-java</artifactId>
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-testng</artifactId>
-            <version>${cucumber.version}</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
@@ -61,19 +52,23 @@
         </dependency>
 
         <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-server</artifactId>
             <version>${selenium.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -81,23 +76,18 @@
         </dependency>
 
         <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>${appium.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-testng</artifactId>
+            <artifactId>cucumber-java</artifactId>
             <version>${cucumber.version}</version>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.14.3</version>
-            <scope>test</scope>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.3.0</version>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -114,7 +104,7 @@
                         </goals>
                         <configuration>
                             <includes>
-                                <include>**/*RunCucumberTest.java</include>
+                                <include>**/*Runner.java</include>
                             </includes>
                             <properties>
                                 <property>

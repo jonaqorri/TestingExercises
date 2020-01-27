@@ -8,10 +8,10 @@ public class User {
     private String email;
 
     public User(){
-        firstName = "Jona";
-        lastName = "Qorri";
+        firstName = "user";
+        lastName = "name";
         password = "Password123";
-        email = "jona.qorri@coveros.com";
+        email = "user.name@yahoo.com";
     }
 
     public String getFirstName() {

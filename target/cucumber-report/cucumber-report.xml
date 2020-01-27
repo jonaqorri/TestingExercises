@@ -1,55 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="7" time="21.624811">
-<testcase classname="Login and Logout" name="Signing in with correct credentials" time="3.038567">
-<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given I am a registered user................................................passed
-When I click on the Sign In tab on the site.................................passed
-And I type my correct username and password.................................passed
-And I click the Sign In button..............................................passed
-Then I should be redirected to the "Welcome" page...........................undefined
-]]></failure>
-</testcase>
-<testcase classname="Login and Logout" name="Signing in with incorrect credentials" time="3.061755">
-<system-out><![CDATA[Given I am a user...........................................................passed
-When I click on the Sign In tab on the site.................................passed
-And I type in the wrong username and password combo.........................passed
-And I click the Sign In button..............................................passed
-Then I should see a Failed Login message....................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login and Logout" name="Logging out" time="3.092811">
-<system-out><![CDATA[Given I am a registered user................................................passed
-And I am logged in to the site..............................................passed
-When I click the log out button.............................................passed
-And the Sign Out pop up appears.............................................passed
-And I click confirm.........................................................passed
-Then I am returned to the Sign In page......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Register" name="Access registration page" time="3.101751">
-<system-out><![CDATA[Given I navigate to the Codeveros Login page................................passed
-When I click on Register tab................................................passed
-Then I see 6 text fields....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Register" name="Register" time="3.061885">
-<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given I am on the Registration page.........................................passed
-When I fill in the 6 text fields............................................passed
-And I am able to click the Registe button...................................undefined
-Then I am redirected to the Welcome to Codeveros page.......................skipped
-]]></failure>
-</testcase>
-<testcase classname="Register" name="Check the user is registered through the menu" time="3.092459">
-<system-out><![CDATA[Given I am a registered user................................................passed
-And I am on the Welcome page................................................passed
-When I click User under Menu................................................passed
-Then I see my information populated under the User List.....................passed
-]]></system-out>
-</testcase>
-<testcase classname="Register" name="Check the user is registered through the header icon" time="3.175583">
-<system-out><![CDATA[Given I am a registered user................................................passed
-And I am on the Welcome page................................................passed
-When I click the User icon on the site header...............................passed
-Then I see my information populated under the User List.....................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="13.575898">
+<testcase classname="Registration" name="User can navigate to the login page" time="13.575898">
+<system-out><![CDATA[When I navigate to the login page...........................................passed
+Then I see the login page...................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

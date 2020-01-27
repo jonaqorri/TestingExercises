@@ -1,0 +1,15 @@
+/Users/jqorri/workspace/TestingExercises/src/main/java/workflows/WorkflowFactory.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/steps/Configuration.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/controllers/CustomPicoFactory.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/steps/DeviceController.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/objects/LoginTab.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/steps/Register.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/workflows/chrome/RegistrationPageChrome.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/utilities/Property.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/controllers/AndroidController.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/objects/User.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/controllers/ChromeController.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/objects/RegistrationTab.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/workflows/RegistrationWorkflow.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/workflows/android/RegistrationPageAndroid.java
+/Users/jqorri/workspace/TestingExercises/src/main/java/utilities/Device.java
