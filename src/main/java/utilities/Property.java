@@ -1,9 +1,10 @@
 package utilities;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.function.Supplier;
+import java.util.logging.Logger;
 
 public class Property {
 
@@ -11,17 +12,25 @@ public class Property {
 
     private Property() {}
 
-    public static Properties getPropertyFiles(String propertyFile) {
-        Properties properties = new Properties();
-        try(InputStream inputStream = new FileInputStream(propertyFile)){
-            properties.load(inputStream);
-        } catch (IOException e) {
-            e.printStackTrace();
+    private static final Logger log = Logger.getLogger(String.valueOf(Property.class));
+
+    public static String getPropertyFiles(String propertyFile) {
+        if(System.getProperty(propertyFile) != null) {
+            return System.getProperty(propertyFile).trim();
         }
-        return properties;
+
+        Properties properties = new Properties();
+        try (InputStream inputStream = Property.class.getClassLoader().getResourceAsStream(APP)) {
+            properties.load(inputStream);
+        } catch (NullPointerException | IOException e) {
+            log.info((Supplier<String>) e);
+        }
+
+        String fullProperty = properties.getProperty(propertyFile);
+        if(fullProperty != null) {
+            fullProperty = fullProperty.trim();
+        }
+        return fullProperty;
     }
 
-    public static String getAppProperty(String property) {
-        return getPropertyFiles(APP).getProperty(property);
-    }
 }

@@ -1,35 +1,29 @@
 package steps;
 
+import io.cucumber.core.api.Scenario;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import workflows.RegistrationWorkflow;
-import workflows.WorkflowFactory;
 
 public class Register {
 
-    private final RegistrationWorkflow registrationWorkflow;
+    private final DeviceController registration;
 
-    public Register(DeviceController deviceController){
+    public Register(DeviceController registration) {
+        this.registration = registration;
+    }
+
+    /*public Register(DeviceController deviceController){
         this.registrationWorkflow = WorkflowFactory.getTestWorkflow(deviceController);
+    } */
+    @Given("^I am on the registration tab$")
+    public void registrationTab(){
+        //TODO
     }
 
-    @When("^I navigate to the login page$")
-    public void navigateToLoginPage() {
-        registrationWorkflow.loadEnvironment();
-    }
-
-    @Then("^I see the login page$")
-    public void iSeeTheSignInPage(){
-        registrationWorkflow.verifyLoginPage();
-    }
-
-    @When("^I click on Register tab$")
-    public void clickOnRegisterTab() {
-
-    }
-    @Then("^I see 6 text fields$")
-    public void verifyRegistrationTextFields() {
-
+    @When("^I register a new user$")
+    public void registerNewUser(){
+        //TODO
     }
 
 }
