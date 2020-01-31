@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="13.575898">
-<testcase classname="Registration" name="User can navigate to the login page" time="13.575898">
-<system-out><![CDATA[When I navigate to the login page...........................................passed
-Then I see the login page...................................................passed
-]]></system-out>
-</testcase>
-</testsuite>
